@@ -1,0 +1,16 @@
+{
+  "name": "mesh-signaling-node",
+  "version": "1.0.0",
+  "private": true,
+  "description": "WebRTC signaling node for the mesh PWA",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "ws": "^8.18.3"
+  }
+}
