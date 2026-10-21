@@ -1,24 +1,35 @@
-app = "mesh-signaling-node-example"
-primary_region = "cdg"
+# fly.toml app configuration file generated for mesh-pwa on 2026-10-21T14:55:55Z
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'mesh-pwa'
+primary_region = 'ams'
 
 [build]
-  dockerfile = "Dockerfile"
+  dockerfile = 'Dockerfile'
 
 [env]
-  PORT = "8080"
-  MAX_CLIENTS = "500"
-  MAX_ROOM_PEERS = "12"
+  MAX_CLIENTS = '500'
+  MAX_ROOM_PEERS = '12'
+  PORT = '8080'
 
 [http_service]
   internal_port = 8080
   force_https = true
-  auto_stop_machines = "off"
+  auto_stop_machines = 'off'
   auto_start_machines = true
   min_machines_running = 1
 
-[[http_service.checks]]
-  method = "GET"
-  path = "/health"
-  interval = "30s"
-  timeout = "5s"
-  grace_period = "10s"
+  [[http_service.checks]]
+    interval = '30s'
+    timeout = '5s'
+    grace_period = '10s'
+    method = 'GET'
+    path = '/health'
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
+  memory_mb = 256
