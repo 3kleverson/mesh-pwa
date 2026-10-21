@@ -1,4 +1,9 @@
 {
   "version": 1,
-  "nodes": []
+  "nodes": [
+    {
+      "name": "node-1",
+      "signalUrl": "wss://mesh-pwa.fly.dev/signal"
+    }
+  ]
 }
