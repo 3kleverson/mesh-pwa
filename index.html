@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101827">
+  <meta name="description" content="Application mesh peer-to-peer">
+  <title>Mesh PWA</title>
+  <link rel="manifest" href="./manifest.json">
+  <style>
+    :root { color-scheme: dark; font-family: system-ui, sans-serif; }
+    body { max-width: 760px; margin: 0 auto; padding: 24px; background: #101827; color: #f1f5f9; }
+    h1 { margin-bottom: 8px; }
+    .panel { margin-top: 20px; padding: 18px; border: 1px solid #344256; border-radius: 14px; background: #182437; }
+    .muted { color: #aab8ca; }
+    button { padding: 10px 14px; border: 0; border-radius: 8px; background: #7dd3fc; color: #082032; font-weight: 700; cursor: pointer; }
+    li { margin: 10px 0; overflow-wrap: anywhere; }
+    #status { white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+  <h1>Mesh PWA</h1>
+  <p class="muted">Point d’entrée du réseau mesh peer-to-peer.</p>
+
+  <section class="panel">
+    <h2>État de l’application</h2>
+    <p id="status">Initialisation…</p>
+    <button id="refresh" type="button">Recharger les nœuds</button>
+  </section>
+
+  <section class="panel">
+    <h2>Nœuds connus</h2>
+    <ul id="nodes"><li>Chargement…</li></ul>
+  </section>
+
+  <script src="./app.js" defer></script>
+</body>
+</html>
