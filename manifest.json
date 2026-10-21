@@ -1,0 +1,12 @@
+{
+  "id": "./",
+  "name": "Mesh PWA",
+  "short_name": "Mesh",
+  "description": "Application mesh peer-to-peer",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#101827",
+  "theme_color": "#101827",
+  "icons": []
+}
